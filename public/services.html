@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Company Digital Platform</title>
+    <meta name="description" content="Explore our comprehensive digital services including mobile apps, web development, AR/VR, blockchain, and game development with cutting-edge technology.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="services-page">
+    <!-- Page Transition -->
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">Digital<span class="highlight">Platform</span></span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="hero-background">
+            <div class="tech-grid">
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line"></div>
+                <div class="grid-line vertical"></div>
+                <div class="grid-line vertical"></div>
+                <div class="grid-line vertical"></div>
+            </div>
+            <div class="floating-icons">
+                <div class="tech-icon icon-1"><i class="fab fa-react"></i></div>
+                <div class="tech-icon icon-2"><i class="fab fa-node-js"></i></div>
+                <div class="tech-icon icon-3"><i class="fab fa-unity"></i></div>
+                <div class="tech-icon icon-4"><i class="fab fa-ethereum"></i></div>
+                <div class="tech-icon icon-5"><i class="fas fa-cube"></i></div>
+                <div class="tech-icon icon-6"><i class="fab fa-android"></i></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="services-hero-content">
+                <h1 class="services-title">
+                    <span class="title-line">Our</span>
+                    <span class="title-line">Digital</span>
+                    <span class="title-line highlight">Services</span>
+                </h1>
+                <p class="services-subtitle">From concept to launch, we deliver comprehensive digital solutions that transform ideas into powerful, scalable, and innovative products.</p>
+                <div class="services-stats">
+                    <div class="stat-box">
+                        <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                        <div class="stat-number" data-target="7">0</div>
+                        <div class="stat-label">Service Areas</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Categories -->
+    <section class="service-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Digital Journey</h2>
+                <p class="section-subtitle">Explore our specialized service areas designed to meet every digital need</p>
+            </div>
+            <div class="category-filter">
+                <button class="filter-btn active" data-filter="all">All Services</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+                <button class="filter-btn" data-filter="emerging">Emerging Tech</button>
+                <button class="filter-btn" data-filter="creative">Creative</button>
+            </div>
+            <div class="services-grid">
+                <!-- Mobile Apps -->
+                <div class="service-card mobile-service development" data-service="mobile">
+                    <div class="service-background">
+                        <div class="service-pattern"></div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Native iOS & Android apps, cross-platform solutions with React Native and Flutter</p>
+                    <div class="service-features">
+                        <span class="feature">Native Development</span>
+                        <span class="feature">Cross-Platform</span>
+                        <span class="feature">UI/UX Design</span>
+                    </div>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h4>Technologies We Use</h4>
+                            <div class="tech-stack">
+                                <span>Swift</span>
+                                <span>Kotlin</span>
+                                <span>React Native</span>
+                                <span>Flutter</span>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="service-card web-service development" data-service="web">
+                    <div class="service-background">
+                        <div class="service-pattern"></div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Modern web applications, progressive web apps, and responsive websites</p>
+                    <div class="service-features">
+                        <span class="feature">Progressive Web Apps</span>
+                        <span class="feature">Responsive Design</span>
+                        <span class="feature">Performance</span>
+                    </div>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h4>Technologies We Use</h4>
+                            <div class="tech-stack">
+                                <span>React</span>
+                                <span>Vue.js</span>
+                                <span>Node.js</span>
+                                <span>TypeScript</span>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AR/VR -->
+                <div class="service-card arvr-service emerging" data-service="arvr">
+                    <div class="service-background">
+                        <div class="service-pattern"></div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>AR/VR Experiences</h3>
+                    <p>Immersive augmented and virtual reality applications for various industries</p>
+                    <div class="service-features">
+                        <span class="feature">AR Applications</span>
+                        <span class="feature">VR Experiences</span>
+                        <span class="feature">3D Modeling</span>
+                    </div>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h4>Technologies We Use</h4>
+                            <div class="tech-stack">
+                                <span>Unity</span>
+                                <span>Unreal Engine</span>
+                                <span>ARCore</span>
+                                <span>ARKit</span>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockchain -->
+                <div class="service-card blockchain-service emerging" data-service="blockchain">
+                    <div class="service-background">
+                        <div class="service-pattern"></div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3>Blockchain Solutions</h3>
+                    <p>Decentralized applications, smart contracts, and blockchain integration</p>
+                    <div class="service-features">
+                        <span class="feature">Smart Contracts</span>
+                        <span class="feature">DeFi Solutions</span>
+                        <span class="feature">NFT Platforms</span>
+                    </div>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h4>Technologies We Use</h4>
+                            <div class="tech-stack">
+                                <span>Solidity</span>
+                                <span>Web3.js</span>
+                                <span>Ethereum</span>
+                                <span>Polygon</span>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Development -->
+                <div class="service-card games-service creative" data-service="games">
+                    <div class="service-background">
+                        <div class="service-pattern"></div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Game Development</h3>
+                    <p>Interactive gaming experiences for mobile, web, and desktop platforms</p>
+                    <div class="service-features">
+                        <span class="feature">2D/3D Games</span>
+                        <span class="feature">Multiplayer</span>
+                        <span class="feature">Cross-Platform</span>
+                    </div>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h4>Technologies We Use</h4>
+                            <div class="tech-stack">
+                                <span>Unity</span>
+                                <span>Unreal Engine</span>
+                                <span>C#</span>
+                                <span>C++</span>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce -->
+                <div class="service-card ecommerce-service development" data-service="ecommerce">
+                    <div class="service-background">
+                        <div class="service-pattern"></div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-commerce Solutions</h3>
+                    <p>Custom online stores, marketplace platforms, and payment integrations</p>
+                    <div class="service-features">
+                        <span class="feature">Custom Stores</span>
+                        <span class="feature">Payment Gateways</span>
+                        <span class="feature">Analytics</span>
+                    </div>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h4>Technologies We Use</h4>
+                            <div class="tech-stack">
+                                <span>Shopify</span>
+                                <span>WooCommerce</span>
+                                <span>Magento</span>
+                                <span>Custom Solutions</span>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="service-card design-service creative" data-service="design">
+                    <div class="service-background">
+                        <div class="service-pattern"></div>
+                    </div>
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>User-centered design solutions that combine aesthetics with functionality</p>
+                    <div class="service-features">
+                        <span class="feature">User Research</span>
+                        <span class="feature">Prototyping</span>
+                        <span class="feature">Brand Design</span>
+                    </div>
+                    <div class="service-overlay">
+                        <div class="overlay-content">
+                            <h4>Technologies We Use</h4>
+                            <div class="tech-stack">
+                                <span>Figma</span>
+                                <span>Adobe XD</span>
+                                <span>Sketch</span>
+                                <span>Principle</span>
+                            </div>
+                            <a href="#" class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Development Process</h2>
+                <p class="section-subtitle">A proven methodology that ensures quality and success</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step" data-step="1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Discovery & Strategy</h3>
+                        <p>We understand your vision, analyze requirements, and create a comprehensive strategy.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step" data-step="2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3>Design & Prototype</h3>
+                        <p>Creating wireframes, mockups, and interactive prototypes to visualize the solution.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step" data-step="3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Development</h3>
+                        <p>Building your solution with clean, scalable code and modern development practices.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step" data-step="4">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <h3>Testing & QA</h3>
+                        <p>Rigorous testing to ensure quality, performance, and reliability across all platforms.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="process-step" data-step="5">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Launch & Support</h3>
+                        <p>Deploying your solution and providing ongoing support and maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technologies We Master</h2>
+                <p class="section-subtitle">Cutting-edge tools and frameworks for modern solutions</p>
+            </div>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="tech-items">
+                        <div class="tech-item">React</div>
+                        <div class="tech-item">Vue.js</div>
+                        <div class="tech-item">Angular</div>
+                        <div class="tech-item">TypeScript</div>
+                        <div class="tech-item">Next.js</div>
+                        <div class="tech-item">Nuxt.js</div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="tech-items">
+                        <div class="tech-item">Node.js</div>
+                        <div class="tech-item">Python</div>
+                        <div class="tech-item">PHP</div>
+                        <div class="tech-item">Java</div>
+                        <div class="tech-item">C#</div>
+                        <div class="tech-item">Go</div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile</h3>
+                    </div>
+                    <div class="tech-items">
+                        <div class="tech-item">React Native</div>
+                        <div class="tech-item">Flutter</div>
+                        <div class="tech-item">Swift</div>
+                        <div class="tech-item">Kotlin</div>
+                        <div class="tech-item">Xamarin</div>
+                        <div class="tech-item">Ionic</div>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Emerging</h3>
+                    </div>
+                    <div class="tech-items">
+                        <div class="tech-item">Blockchain</div>
+                        <div class="tech-item">AI/ML</div>
+                        <div class="tech-item">AR/VR</div>
+                        <div class="tech-item">IoT</div>
+                        <div class="tech-item">WebGL</div>
+                        <div class="tech-item">Three.js</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Digital Project?</h2>
+                <p>Let's discuss your requirements and create something amazing together.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                    <a href="projects.html" class="btn btn-secondary">View Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Digital<span class="highlight">Platform</span></h3>
+                    <p>Creating innovative digital experiences that blend creativity with cutting-edge technology.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Mobile Apps</a></li>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">AR/VR</a></li>
+                            <li><a href="services.html">Blockchain</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">Our Team</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Company Digital Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

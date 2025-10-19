@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Company Digital Platform</title>
+    <meta name="description" content="Explore our portfolio of innovative digital projects including mobile apps, web applications, AR/VR experiences, and blockchain solutions.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="projects-page">
+    <!-- Page Transition -->
+    <div class="page-transition" id="pageTransition"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">Digital<span class="highlight">Platform</span></span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="projects-hero">
+        <div class="hero-canvas">
+            <div class="geometric-shapes">
+                <div class="shape triangle-1"></div>
+                <div class="shape circle-1"></div>
+                <div class="shape square-1"></div>
+                <div class="shape triangle-2"></div>
+                <div class="shape circle-2"></div>
+                <div class="shape hexagon-1"></div>
+            </div>
+            <div class="connecting-lines">
+                <svg class="connection-svg" viewBox="0 0 1200 800">
+                    <path class="connection-path" d="M100,200 Q300,100 500,200 T900,200" stroke="url(#gradient1)" stroke-width="2" fill="none"/>
+                    <path class="connection-path" d="M200,400 Q400,300 600,400 T1000,400" stroke="url(#gradient2)" stroke-width="2" fill="none"/>
+                    <path class="connection-path" d="M150,600 Q350,500 550,600 T950,600" stroke="url(#gradient3)" stroke-width="2" fill="none"/>
+                    <defs>
+                        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:0"/>
+                            <stop offset="50%" style="stop-color:#ff6b35;stop-opacity:1"/>
+                            <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/>
+                        </linearGradient>
+                        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#7b68ee;stop-opacity:0"/>
+                            <stop offset="50%" style="stop-color:#7b68ee;stop-opacity:1"/>
+                            <stop offset="100%" style="stop-color:#2ed573;stop-opacity:0"/>
+                        </linearGradient>
+                        <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#ff3838;stop-opacity:0"/>
+                            <stop offset="50%" style="stop-color:#ff3838;stop-opacity:1"/>
+                            <stop offset="100%" style="stop-color:#ffa726;stop-opacity:0"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        <div class="container">
+            <div class="projects-hero-content">
+                <h1 class="projects-title">
+                    <span class="title-word">Our</span>
+                    <span class="title-word">Creative</span>
+                    <span class="title-word highlight">Portfolio</span>
+                </h1>
+                <p class="projects-subtitle">Discover our collection of innovative digital projects that showcase our expertise in creating cutting-edge solutions across multiple industries and technologies.</p>
+                <div class="projects-metrics">
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="metric-number" data-target="127">0</div>
+                        <div class="metric-label">Completed Projects</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="metric-number" data-target="25">0</div>
+                        <div class="metric-label">Industries Served</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="metric-number" data-target="15">0</div>
+                        <div class="metric-label">Awards Won</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filter & Gallery -->
+    <section class="projects-gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">Browse through our diverse portfolio of successful projects</p>
+            </div>
+            
+            <!-- Filter Navigation -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="web">Web Applications</button>
+                <button class="filter-btn" data-filter="arvr">AR/VR</button>
+                <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+                <button class="filter-btn" data-filter="games">Games</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Mobile App Projects -->
+                <div class="project-item mobile" data-category="mobile">
+                    <div class="project-image">
+                        <div class="image-placeholder mobile-gradient">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>EcoTrack Mobile</h3>
+                                <p>Sustainable lifestyle tracking app with AI recommendations</p>
+                                <div class="project-tech">
+                                    <span>React Native</span>
+                                    <span>Node.js</span>
+                                    <span>AI/ML</span>
+                                </div>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-download"></i> 50K+ Downloads</span>
+                                    <span><i class="fas fa-star"></i> 4.8 Rating</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="view-project-btn" data-project="ecotrack">View Details</button>
+                                <a href="#" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item web" data-category="web">
+                    <div class="project-image">
+                        <div class="image-placeholder web-gradient">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>FinanceFlow Dashboard</h3>
+                                <p>Real-time financial analytics platform for enterprises</p>
+                                <div class="project-tech">
+                                    <span>Vue.js</span>
+                                    <span>Python</span>
+                                    <span>D3.js</span>
+                                </div>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-users"></i> 10K+ Users</span>
+                                    <span><i class="fas fa-chart-line"></i> 25% Growth</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="view-project-btn" data-project="financeflow">View Details</button>
+                                <a href="#" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item arvr" data-category="arvr">
+                    <div class="project-image">
+                        <div class="image-placeholder arvr-gradient">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>VirtualShowroom AR</h3>
+                                <p>Immersive product visualization for retail industry</p>
+                                <div class="project-tech">
+                                    <span>Unity</span>
+                                    <span>ARKit</span>
+                                    <span>C#</span>
+                                </div>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-eye"></i> 100K+ Views</span>
+                                    <span><i class="fas fa-shopping-cart"></i> 40% Conversion</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="view-project-btn" data-project="virtualshowroom">View Details</button>
+                                <a href="#" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item blockchain" data-category="blockchain">
+                    <div class="project-image">
+                        <div class="image-placeholder blockchain-gradient">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>CryptoMarket DeFi</h3>
+                                <p>Decentralized trading platform with yield farming</p>
+                                <div class="project-tech">
+                                    <span>Solidity</span>
+                                    <span>Web3.js</span>
+                                    <span>React</span>
+                                </div>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-coins"></i> $2M+ TVL</span>
+                                    <span><i class="fas fa-exchange-alt"></i> 500+ Trades/Day</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="view-project-btn" data-project="cryptomarket">View Details</button>
+                                <a href="#" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item games" data-category="games">
+                    <div class="project-image">
+                        <div class="image-placeholder games-gradient">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>SpaceQuest VR</h3>
+                                <p>Multiplayer space exploration game with VR support</p>
+                                <div class="project-tech">
+                                    <span>Unreal Engine</span>
+                                    <span>C++</span>
+                                    <span>Steam VR</span>
+                                </div>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-users"></i> 25K+ Players</span>
+                                    <span><i class="fas fa-trophy"></i> Indie Award Winner</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="view-project-btn" data-project="spacequest">View Details</button>
+                                <a href="#" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item ecommerce" data-category="ecommerce">
+                    <div class="project-image">
+                        <div class="image-placeholder ecommerce-gradient">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>FashionForward Store</h3>
+                                <p>AI-powered fashion e-commerce with virtual try-on</p>
+                                <div class="project-tech">
+                                    <span>Shopify Plus</span>
+                                    <span>TensorFlow</span>
+                                    <span>AR.js</span>
+                                </div>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-shopping-bag"></i> $500K+ Sales</span>
+                                    <span><i class="fas fa-heart"></i> 95% Satisfaction</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="view-project-btn" data-project="fashionforward">View Details</button>
+                                <a href="#" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item web mobile" data-category="web mobile">
+                    <div class="project-image">
+                        <div class="image-placeholder hybrid-gradient">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>HealthConnect Platform</h3>
+                                <p>Telemedicine platform connecting patients and doctors</p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>WebRTC</span>
+                                </div>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-video"></i> 50K+ Consultations</span>
+                                    <span><i class="fas fa-user-md"></i> 500+ Doctors</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="view-project-btn" data-project="healthconnect">View Details</button>
+                                <a href="#" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item blockchain games" data-category="blockchain games">
+                    <div class="project-image">
+                        <div class="image-placeholder nft-gradient">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <h3>CryptoLegends NFT</h3>
+                                <p>Play-to-earn NFT gaming platform with marketplace</p>
+                                <div class="project-tech">
+                                    <span>Unity</span>
+                                    <span>Ethereum</span>
+                                    <span>IPFS</span>
+                                </div>
+                                <div class="project-stats">
+                                    <span><i class="fas fa-coins"></i> 10K+ NFTs Minted</span>
+                                    <span><i class="fas fa-gamepad"></i> 15K+ Players</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="view-project-btn" data-project="cryptolegends">View Details</button>
+                                <a href="#" class="external-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Modal -->
+    <div class="case-study-modal" id="caseStudyModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Project Title</h2>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="project-details">
+                    <div class="project-overview">
+                        <h3>Project Overview</h3>
+                        <p id="projectDescription">Detailed project description will be loaded here...</p>
+                    </div>
+                    <div class="project-challenges">
+                        <h3>Challenges & Solutions</h3>
+                        <ul id="projectChallenges">
+                            <li>Challenge and solution details...</li>
+                        </ul>
+                    </div>
+                    <div class="project-results">
+                        <h3>Results & Impact</h3>
+                        <div class="results-grid" id="projectResults">
+                            <!-- Results will be loaded dynamically -->
+                        </div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <h3>Project Gallery</h3>
+                    <div class="gallery-grid" id="projectGallery">
+                        <!-- Gallery images will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real feedback from satisfied clients worldwide</p>
+            </div>
+            <div class="testimonials-carousel">
+                <div class="testimonial-track">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"The team delivered an exceptional mobile app that exceeded our expectations. The user experience is flawless and our customers love it."</p>
+                            <div class="client-info">
+                                <div class="client-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="client-details">
+                                    <h4>Sarah Johnson</h4>
+                                    <span>CEO, EcoTrack</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"Their blockchain expertise helped us launch our DeFi platform successfully. The security and performance are outstanding."</p>
+                            <div class="client-info">
+                                <div class="client-avatar">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <div class="client-details">
+                                    <h4>Michael Chen</h4>
+                                    <span>Founder, CryptoMarket</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"The AR showroom revolutionized our retail experience. Sales increased by 40% after implementation."</p>
+                            <div class="client-info">
+                                <div class="client-avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="client-details">
+                                    <h4>Emma Rodriguez</h4>
+                                    <span>Director, FashionForward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="carousel-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="projects-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's collaborate to bring your digital vision to life with innovative solutions.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                    <a href="services.html" class="btn btn-secondary">Explore Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Digital<span class="highlight">Platform</span></h3>
+                    <p>Creating innovative digital experiences that blend creativity with cutting-edge technology.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Mobile Apps</a></li>
+                            <li><a href="services.html">Web Development</a></li>
+                            <li><a href="services.html">AR/VR</a></li>
+                            <li><a href="services.html">Blockchain</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="about.html">Our Team</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Company Digital Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
