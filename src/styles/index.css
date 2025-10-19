@@ -1,0 +1,838 @@
+/* Global AI Theme Styles - React Version */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Deep Ocean Tech Theme */
+  --primary-dark: #0a0e1a;
+  --secondary-dark: #1a1f35;
+  --tertiary-dark: #252a42;
+  --deep-blue: #1e3a8a;
+  --ocean-blue: #1d4ed8;
+  --electric-blue: #3b82f6;
+  --cyber-teal: #06b6d4;
+  --aqua-glow: #22d3ee;
+  --ice-blue: #bfdbfe;
+  --white: #ffffff;
+  --light-gray: #f1f5f9;
+  --medium-gray: #64748b;
+  --dark-gray: #334155;
+  --text-primary: #ffffff;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-accent: #22d3ee;
+  
+  /* Advanced Fonts */
+  --font-primary: 'Space Grotesk', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  --font-accent: 'JetBrains Mono', monospace;
+  
+  /* Ocean Network Colors */
+  --ocean-primary: rgba(34, 211, 238, 0.9);
+  --ocean-secondary: rgba(59, 130, 246, 0.7);
+  --ocean-tertiary: rgba(30, 64, 175, 0.6);
+  --ocean-glow: rgba(34, 211, 238, 0.5);
+  
+  /* Ocean Tech Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--aqua-glow), var(--electric-blue));
+  --gradient-secondary: linear-gradient(135deg, var(--ocean-blue), var(--deep-blue));
+  --gradient-dark: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+  --gradient-ocean: linear-gradient(135deg, var(--ocean-primary), var(--ocean-secondary), var(--ocean-tertiary));
+  --gradient-waves: linear-gradient(45deg, #22d3ee, #3b82f6, #1d4ed8, #1e3a8a);
+  --gradient-depth: radial-gradient(ellipse at center, rgba(34, 211, 238, 0.15) 0%, transparent 70%);
+  
+  /* Ocean Shadows and Effects */
+  --shadow-ocean: 0 0 50px rgba(34, 211, 238, 0.4);
+  --shadow-depth: 0 20px 40px rgba(29, 78, 216, 0.3);
+  --shadow-wave: 0 0 80px rgba(6, 182, 212, 0.3);
+  --blur-glass: blur(30px);
+  --blur-wave: blur(50px);
+  
+  /* Advanced Animation Timing */
+  --transition-fast: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-medium: 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-slow: 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --animation-pulse: oceanPulse 3s ease-in-out infinite;
+  --animation-wave: waveMotion 4s ease-in-out infinite;
+  --animation-flow: dataFlow 6s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background: var(--gradient-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Deep Ocean Tech Background Effect */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(34, 211, 238, 0.12) 0%, transparent 65%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.10) 0%, transparent 60%),
+    radial-gradient(circle at 60% 40%, rgba(29, 78, 216, 0.08) 0%, transparent 55%),
+    linear-gradient(135deg, rgba(6, 182, 212, 0.04) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: -1;
+  animation: oceanFlow 20s ease-in-out infinite;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(34, 211, 238, 0.02) 4px,
+      transparent 6px
+    );
+  pointer-events: none;
+  z-index: -1;
+  animation: wavePattern 12s ease-in-out infinite;
+}
+
+/* Ocean Tech Selection styles */
+::selection {
+  background: var(--aqua-glow);
+  color: var(--primary-dark);
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+}
+
+::-moz-selection {
+  background: var(--aqua-glow);
+  color: var(--primary-dark);
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+}
+
+/* Cyberpunk Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-dark);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 6px;
+  border: 2px solid var(--primary-dark);
+  box-shadow: inset 0 0 10px rgba(255, 0, 128, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-waves);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.7);
+}
+
+/* React App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Global Component Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.6);
+  }
+}
+
+@keyframes neuralPulse {
+  0%, 100% {
+    background: var(--neural-primary);
+    transform: scale(1);
+  }
+  50% {
+    background: var(--neural-secondary);
+    transform: scale(1.1);
+  }
+}
+
+/* Neural Network Animation Keyframes */
+@keyframes neuralFlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes dataTransmission {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Common Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-medium);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-ocean);
+  border: 2px solid transparent;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-primary);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.8s ease;
+}
+
+.btn-primary:hover::after {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px rgba(34, 211, 238, 0.6), 0 0 40px rgba(59, 130, 246, 0.3);
+  background: var(--gradient-waves);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--aqua-glow);
+  border: 2px solid var(--aqua-glow);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-primary);
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-secondary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-secondary:hover::before {
+  opacity: 1;
+}
+
+.btn-secondary:hover {
+  color: var(--white);
+  border-color: var(--electric-blue);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-wave);
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+}
+
+/* Glass Effect Components */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+/* Neural Network Canvas Base Styles */
+.neural-network-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive Design Base */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 13px;
+  }
+  
+  .btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Loading and Transition States */
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--bright-cyan);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Page Transition Effects */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all var(--transition-slow);
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all var(--transition-slow);
+}
+
+/* Focus States for Accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+  outline: 2px solid var(--bright-cyan);
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-dark: #000000;
+    --text-primary: #ffffff;
+    --bright-cyan: #00ffff;
+    --electric-green: #00ff00;
+  }
+}
+
+/* Advanced Ocean Tech Animations */
+@keyframes oceanFlow {
+  0%, 100% {
+    filter: hue-rotate(0deg) brightness(1) saturate(1);
+    transform: scale(1);
+  }
+  25% {
+    filter: hue-rotate(30deg) brightness(1.1) saturate(1.2);
+    transform: scale(1.02);
+  }
+  50% {
+    filter: hue-rotate(60deg) brightness(0.95) saturate(1.1);
+    transform: scale(0.98);
+  }
+  75% {
+    filter: hue-rotate(90deg) brightness(1.05) saturate(1.3);
+    transform: scale(1.01);
+  }
+}
+
+@keyframes wavePattern {
+  0% {
+    transform: translateX(-100%) skewY(2deg);
+  }
+  100% {
+    transform: translateX(100vw) skewY(-2deg);
+  }
+}
+
+@keyframes oceanPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.4), 0 0 60px rgba(59, 130, 246, 0.2);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 50px rgba(34, 211, 238, 0.8), 0 0 100px rgba(59, 130, 246, 0.5);
+  }
+}
+
+@keyframes waveGlow {
+  0% {
+    text-shadow: 0 0 15px rgba(34, 211, 238, 0.6), 0 0 30px rgba(59, 130, 246, 0.3);
+    filter: brightness(1);
+  }
+  100% {
+    text-shadow: 0 0 25px rgba(34, 211, 238, 0.9), 0 0 50px rgba(59, 130, 246, 0.6), 0 0 75px rgba(6, 182, 212, 0.4);
+    filter: brightness(1.3);
+  }
+}
+
+@keyframes waveMotion {
+  0% {
+    background-position: 0% 50%;
+    transform: translateX(0) rotateZ(0deg);
+  }
+  25% {
+    background-position: 25% 25%;
+    transform: translateX(10px) rotateZ(1deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: translateX(0) rotateZ(0deg);
+  }
+  75% {
+    background-position: 75% 75%;
+    transform: translateX(-10px) rotateZ(-1deg);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: translateX(0) rotateZ(0deg);
+  }
+}
+
+@keyframes deepCurrent {
+  0% {
+    transform: rotate(0deg) scale(1) translateZ(0);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1) translateZ(10px);
+    filter: hue-rotate(15deg);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.95) translateZ(0);
+    filter: hue-rotate(30deg);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.05) translateZ(-10px);
+    filter: hue-rotate(45deg);
+  }
+  100% {
+    transform: rotate(360deg) scale(1) translateZ(0);
+    filter: hue-rotate(60deg);
+  }
+}
+
+@keyframes dataStream {
+  0% {
+    transform: translateX(-100%) skewX(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) skewX(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes neonFlicker {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 0, 128, 0.8);
+  }
+  2% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+  4% {
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(255, 0, 128, 1);
+  }
+  6% {
+    opacity: 0.9;
+  }
+  8% {
+    opacity: 1;
+  }
+}
+
+@keyframes matrixRain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Enhanced Glass Effect with Cyberpunk Theme */
+.glass-effect {
+  background: rgba(255, 0, 128, 0.05);
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid rgba(255, 0, 128, 0.2);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.8s ease;
+}
+
+.glass-effect:hover::before {
+  left: 100%;
+}
+
+/* Modern Magnetic Cursor System */
+body {
+  cursor: none;
+}
+
+/* Cursor Dot - Small, precise indicator */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--aqua-glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.15s ease-out, background 0.2s ease;
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+  mix-blend-mode: screen;
+}
+
+/* Cursor Ring - Larger, follows with delay */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--aqua-glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0.8;
+  background: rgba(34, 211, 238, 0.05);
+}
+
+.cursor-ripple {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--aqua-glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0) scale(0);
+  contain: layout style paint;
+  animation: rippleEffect 0.5s ease-out;
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: translate3d(-20px, -20px, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-20px, -20px, 0) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Interactive Elements */
+a, button, input, textarea, select, [role="button"], .clickable {
+  cursor: none;
+}
+
+/* Dot Hover State */
+.dot-hover {
+  transform: translate3d(-4px, -4px, 0) scale(1.5);
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(34, 211, 238, 0.5);
+}
+
+/* Ring Hover State */
+.ring-hover {
+  transform: translate3d(-20px, -20px, 0) scale(0.6);
+  border-color: #ffffff;
+  border-width: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Dot Click State */
+.dot-click {
+  transform: translate3d(-4px, -4px, 0) scale(0.8);
+  background: var(--electric-blue);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.9);
+}
+
+/* Ring Click State */
+.ring-click {
+  transform: translate3d(-20px, -20px, 0) scale(1.2);
+  border-color: var(--electric-blue);
+  border-width: 1px;
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Click Spark Effect */
+.cursor-spark {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: var(--aqua-glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.9;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  animation: sparkBurst 0.8s ease-out forwards;
+}
+
+@keyframes sparkBurst {
+  0% {
+    transform: translate3d(-2px, -2px, 0) scale(1);
+    opacity: 0.9;
+    box-shadow: 0 0 8px var(--aqua-glow);
+  }
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 15px var(--aqua-glow);
+  }
+  100% {
+    transform: translate3d(calc(-2px + var(--dx, 0)), calc(-2px + var(--dy, 0)), 0) scale(0);
+    opacity: 0;
+    box-shadow: 0 0 5px var(--aqua-glow);
+  }
+}
+
+/* Click Ring Effect */
+.cursor-click-ring {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--aqua-glow);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  animation: clickRingExpand 0.6s ease-out;
+}
+
+@keyframes clickRingExpand {
+  0% {
+    transform: translate3d(-25px, -25px, 0) scale(0.3);
+    opacity: 1;
+    border-width: 3px;
+  }
+  50% {
+    opacity: 0.7;
+    border-width: 2px;
+  }
+  100% {
+    transform: translate3d(-25px, -25px, 0) scale(1.5);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .cursor-dot,
+  .cursor-ring,
+  .cursor-spark,
+  .cursor-click-ring {
+    display: none;
+  }
+  
+  body {
+    cursor: default;
+  }
+  
+  a, button, input, textarea, select, [role="button"], .clickable {
+    cursor: pointer;
+  }
+}
